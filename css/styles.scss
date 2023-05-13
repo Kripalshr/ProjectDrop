@@ -224,7 +224,7 @@ section.objective{
             border: 1px solid #c3c2c248;
             border-radius: 10px;
             height: 15em;
-            overflow-y: scroll;
+            // overflow-y: scroll;
 
             img{
                 margin: 1rem 1rem 0 1.5rem;
@@ -319,7 +319,7 @@ section.ideate{
             color: #74748A;
             width: 100%;
             padding-left: 5em;
-            overflow-y: scroll;
+            // overflow-y: scroll;
         
         }
     }
@@ -367,6 +367,18 @@ footer{
             min-width: 100%;
         }
     }
+    section.objective{
+        .item-card{
+            overflow-y: scroll;
+        }
+    }
+    .sketch{
+        div.text{
+            overflow-y: scroll;
+        }
+    }
+
+
     // section.ideate{
     //     // margin-top: -5em;
     // }
