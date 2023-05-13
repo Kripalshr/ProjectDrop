@@ -231,9 +231,6 @@ section.objective .items .item-card p {
   color: #74748A;
 }
 
-section.ideate {
-  margin-top: -15em;
-}
 section.ideate h1 {
   font-style: normal;
   font-weight: 600;
@@ -326,9 +323,6 @@ footer {
   }
   section.about-us .text-portion {
     min-width: 100%;
-  }
-  section.ideate {
-    margin-top: -5em;
   }
 }
 @media only screen and (max-width: 847px) {
