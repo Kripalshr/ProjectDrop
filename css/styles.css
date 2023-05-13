@@ -9,16 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
-  max-width: 100%;
-  margin: 0 10em;
-}
-
 .top-background {
   background: linear-gradient(100.3deg, #C5F8FF 0%, #E8FFE8 100%);
   position: absolute;
   max-width: 100vw;
-  height: 614px;
+  height: 60%;
   left: 0px;
   top: 0px;
   z-index: -1;
@@ -27,7 +22,11 @@ html {
 .landing-page {
   max-width: 100vw;
   max-height: 100vh;
-  position: relative;
+}
+
+.container {
+  max-width: 100vw;
+  margin: 0 10em;
 }
 
 header {
@@ -96,16 +95,28 @@ header nav .nav-items ul li a {
   color: #202020;
   text-align: center;
 }
-.hero img {
-  min-width: 100%;
+.hero .img-background {
+  background-image: url(/assets/background.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 section.about-us {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 2em;
-  height: 70vh;
-  margin-bottom: 5em;
+  padding-top: 5rem;
+  height: 90vh;
+  position: relative;
+}
+section.about-us .img-background {
+  background-image: url(/assets/Group\ 3.png);
+  max-width: 100%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 section.about-us .drops img {
   display: block;
@@ -118,6 +129,9 @@ section.about-us .text-portion {
   margin-top: 1em;
   margin-right: 5em;
   max-width: 70%;
+  position: relative;
+  max-height: 70%;
+  overflow-y: scroll;
 }
 section.about-us .text-portion h3 {
   font-family: "Poppins", sans-serif;
@@ -138,7 +152,10 @@ section.about-us .text-portion p {
 }
 
 section.theme {
+  margin-top: -5em;
   background: linear-gradient(100.3deg, #C5F8FF 0%, #E8FFE8 100%), #CFE5FF;
+  position: absolute;
+  width: 100%;
 }
 section.theme .sub-heading {
   padding-top: 2em;
@@ -189,6 +206,7 @@ section.objective .items .item-card {
   border: 1px solid rgba(195, 194, 194, 0.2823529412);
   border-radius: 10px;
   height: 15em;
+  overflow-y: scroll;
 }
 section.objective .items .item-card img {
   margin: 1rem 1rem 0 1.5rem;
@@ -248,7 +266,7 @@ section.ideate h2 {
 section.ideate .sketch h1 {
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 36px;
   /* identical to box height */
   margin: 1em 0;
@@ -256,17 +274,23 @@ section.ideate .sketch h1 {
 }
 section.ideate .sketch .row {
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
 }
-section.ideate .sketch div {
+section.ideate .sketch div > img {
+  width: 100%;
+}
+section.ideate .sketch div.text {
   text-align: justify;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 32px;
   /* or 200% */
   color: #74748A;
+  width: 100%;
+  padding-left: 5em;
+  overflow-y: scroll;
 }
 
 footer {
@@ -284,4 +308,31 @@ footer {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #74748A;
+}
+
+@media only screen and (max-width: 1399px) {
+  .container {
+    margin: 0 5em;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .container {
+    margin: 0 2em;
+  }
+  section.about-us {
+    margin-top: -10em;
+    display: grid;
+    grid-template-columns: 0 100%;
+  }
+  section.about-us .text-portion {
+    min-width: 100%;
+  }
+  section.ideate {
+    margin-top: -5em;
+  }
+}
+@media only screen and (max-width: 847px) {
+  .container {
+    margin: 0 2em;
+  }
 }/*# sourceMappingURL=styles.css.map */
